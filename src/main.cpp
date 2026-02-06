@@ -149,9 +149,8 @@ void cercle(sil::Image &image, float cx, float cy, float r1, float thickness)
 void rosace(sil::Image &image)
 {
     float r = 50;
-    float theta = M_PI;
-    float x = image.width() / 2.0f + r * std::cos(theta);
-    float y = image.height() / 2.0f + r * std::sin(theta);
+    float x{};
+    float y{};
 
     for (float theta = 0; theta < 2 * M_PI; theta += M_PI / 3.0f)
     {
@@ -405,7 +404,7 @@ glm::vec3 linear_to_sRGB(glm::vec3 color)
 
 void degrade_couleur(sil::Image &image)
 {
-    for (float x{0}; x < image.width(); x++)
+    for (int x{0}; x < image.width(); x++)
     {
         for (int y{0}; y < image.height(); y++)
         {
@@ -415,8 +414,8 @@ void degrade_couleur(sil::Image &image)
             glm::vec3 color2_linear = sRGB_to_linear(color2);
             glm::vec3 color1_oklab = linear_srgb_to_oklab(color1_linear);
             glm::vec3 color2_oklab = linear_srgb_to_oklab(color2_linear);
-            float pourcentage_gauche = (image.width() - x) / image.width();
-            float pourcentage_droite = x / image.width();
+            float pourcentage_gauche = (image.width() - static_cast<float>(x)) / image.width();
+            float pourcentage_droite = static_cast<float>(x) / image.width();
             glm::vec3 color = pourcentage_gauche * color1_oklab + pourcentage_droite * color2_oklab;
             glm::vec3 color_linear_srgb = oklab_to_linear_srgb(color);
             glm::vec3 color_RGB = linear_to_sRGB(color_linear_srgb);
@@ -496,8 +495,7 @@ sil::Image vortex(sil::Image &image)
 {
     sil::Image new_image{image.width(), image.height()};
     glm::vec2 center_of_rotation = {image.width() / 2.0f, image.height() / 2.0f};
-    float angle = M_PI / 6.0f;
-    glm::vec2 point{0};
+
     for (int x{0}; x < image.width(); x++)
     {
         for (int y{0}; y < image.height(); y++)
@@ -505,7 +503,7 @@ sil::Image vortex(sil::Image &image)
 
             glm::vec2 current_point = {x, y};
             float distance = glm::distance(center_of_rotation, current_point);
-            angle = distance / 10.0f;
+            float angle = distance / 10.0f;
             glm::vec2 new_point = rotated(current_point, center_of_rotation, angle);
             if (new_point.x < image.width() && new_point.y < image.height() && new_point.x >= 0 && new_point.y >= 0)
             {
@@ -520,7 +518,6 @@ sil::Image vortex(sil::Image &image)
     return new_image;
 }
 
-
 double calculateStandardDeviation(const std::vector<glm::vec3> &arr)
 {
     glm::vec3 sum{0};
@@ -529,7 +526,6 @@ double calculateStandardDeviation(const std::vector<glm::vec3> &arr)
 
     float size = arr.size();
 
-   
     for (int i = 0; i < size; ++i)
     {
         sum += arr[i];
@@ -583,15 +579,15 @@ sil::Image kuwahara(sil::Image &image)
                     }
                 }
             }
-            std::vector<std::vector<glm::vec3>> gros_pixels = {down_left, up_left, down_right, up_right};
+            std::vector<std::vector<glm::vec3>> gros_pixel = {down_left, up_left, down_right, up_right};
             std::vector<double> StandardDeviation = {calculateStandardDeviation(down_left), calculateStandardDeviation(up_left), calculateStandardDeviation(down_right), calculateStandardDeviation(up_right)};
             size_t min_idx = std::distance(StandardDeviation.begin(), std::min_element(StandardDeviation.begin(), StandardDeviation.end()));
-            glm::vec3 sum_color{0.0f, 0.0f, 0.0f};
+            glm::vec3 sum_color{};
             int count{0};
 
-            for (size_t i = 0; i < gros_pixels[min_idx].size(); i++)
+            for (size_t i = 0; i < gros_pixel[min_idx].size(); i++)
             {
-                sum_color += gros_pixels[min_idx][i];
+                sum_color += gros_pixel[min_idx][i];
                 count++;
             }
 
@@ -734,8 +730,8 @@ int main()
 
         //---------kuwahara---------//
 
-        sil::Image image{"images/photo.jpg"};
-        sil::Image new_image = kuwahara(image);
-        new_image.save("output/kuwahara.png");
+        // sil::Image image{"images/photo.jpg"};
+        // sil::Image new_image = kuwahara(image);
+        // new_image.save("output/kuwahara.png");
     }
 }
