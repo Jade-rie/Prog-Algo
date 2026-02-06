@@ -31,7 +31,8 @@
 			"expression" : "/Users/mac/TDprog/S1-Prog-Workshop-main/src/*",
 			"paths" : 
 			[
-				"/Users/mac/TDprog/S1-Prog-Workshop-main/src/main.cpp"
+				"/Users/mac/TDprog/S1-Prog-Workshop-main/src/main.cpp",
+				"/Users/mac/TDprog/S1-Prog-Workshop-main/src/readme.md"
 			],
 			"recurse" : true
 		}

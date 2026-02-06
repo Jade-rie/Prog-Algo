@@ -169,6 +169,13 @@
 				0,
 				1
 			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				2
+			]
 		}
 	],
 	"sources" : 
@@ -184,6 +191,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "src/main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 8,
+			"path" : "src/readme.md",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
