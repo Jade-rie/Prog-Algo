@@ -38,12 +38,17 @@
 ![image](./output/RGB_split.png)
 
 **Luminosité**
+Avant :
+![image](./images/photo.jpg) 
 
+Après :
 ![image](./output/luminosite.png)
+
 
 **Disque+Cercle**
 
 ![image](./output/cercle.png)
+Ma fonction cercle est presque similaire à celle du disque. Il suffit de retirer le r2 et ses conditions dans le if pour obtenir un disque. J'ai décidé par la suite de mettre d'autres paramètres d'entrée dans la fonction afin de l'utiliser facilement dans la fonction rosace.
 
 **Animation**
 
@@ -55,12 +60,33 @@
 
 **Mosaïque**
 
+![image](./output/mosaique.png)
 
 **Mosaïque miroir**
+![image](./output/miroir_mosaique.png)
+
 **Glitch**
+![image](./output/glitch.png)
+
 **Tri de pixels**
+![image](./output/tri.png)
+
 **Fractale de Mandelbrot**
+![image](./output/fractale.png)
+
 **Dégradés dans l'espace de couleur Lab**
+![image](./output/degrade_couleur.png)
+
 **Normalisation de l'histogramme**
+Avant : 
+![image](./images/photo_faible_contraste.jpg)
+
+Après : 
+![image](./output/normalisation.png)
+
 **Vortex**
+![image](./output/vortex.png)
+
 **Filtre de Kuwaharas**
+![image](./output/kuwahara.png)
+J'ai récupéré la fonction calculateStandardDeviation d'internet qui prenait en paramètre des tableaux de int que j'ai modifié en tableau de glm::vec3.

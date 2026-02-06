@@ -209,12 +209,12 @@ void glitch(sil::Image &image)
     int b{0};
     for (int i = 0; i < 100; i++)
     {
-        // coordonnées du pixel
+
         int x1 = random_int(0, image.width());
         int y1 = random_int(0, image.height());
         int x2 = random_int(0, image.width());
         int y2 = random_int(0, image.height());
-        // taille du pixel
+
         int largeur = random_int(1, 30);
         int hauteur = random_int(1, 10);
         for (int h = 0; h < hauteur; h++)
@@ -244,33 +244,24 @@ void tri(sil::Image &image)
 {
     for (int i = 0; i < 800; i++)
     {
-        // Coordonnées du pixel
         int x = random_int(0, image.width());
         int y = random_int(0, image.height());
-        // Taille de la bande à trier
         int largeur = random_int(10, 70);
-
-        // Créer un vecteur pour stocker les couleurs
         std::vector<glm::vec3> v;
 
-        // Récupérer les couleurs
         for (int l = 0; l < largeur; l++)
         {
             if (x + l < image.width())
             {
                 v.push_back(image.pixel(x + l, y));
             }
-
-            // Trier les couleurs par luminosité
             std::sort(v.begin(), v.end(), [](glm::vec3 const &color1, glm::vec3 const &color2)
-            {
+                      {
             float moy1 = (color1.r + color1.g + color1.b) / 3.0f;  
             float moy2 = (color2.r + color2.g + color2.b) / 3.0f;
-            return moy1 < moy2; 
-            });
+            return moy1 < moy2; });
 
-            // Remettre les couleurs triées dans l'image
-            for (int l = 0; l < largeur; l++)
+            for (int l = 0; l < v.size(); l++)
             {
                 if (x + l < image.width())
                 {
@@ -301,7 +292,6 @@ void fractale(sil::Image &image)
                 compteur++;
             }
 
-            // Colorier selon le nombre d'itérations
             if (compteur == 30)
             {
                 image.pixel(x, y) = {1.0f, 1.0f, 1.0f};
@@ -309,7 +299,7 @@ void fractale(sil::Image &image)
             else
             {
                 float brightness = compteur / 30.0f;
-                image.pixel(x, y) = {brightness, brightness, brightness}; // Dégradé
+                image.pixel(x, y) = {brightness, brightness, brightness};
             }
         }
     }
@@ -415,7 +405,7 @@ glm::vec3 linear_to_sRGB(glm::vec3 color)
 
 void degrade_couleur(sil::Image &image)
 {
-    for (int x{0}; x < image.width(); x++)
+    for (float x{0}; x < image.width(); x++)
     {
         for (int y{0}; y < image.height(); y++)
         {
@@ -530,8 +520,7 @@ sil::Image vortex(sil::Image &image)
     return new_image;
 }
 
-// Function to calculate the standard deviation of a vector
-// of integers
+
 double calculateStandardDeviation(const std::vector<glm::vec3> &arr)
 {
     glm::vec3 sum{0};
@@ -540,24 +529,18 @@ double calculateStandardDeviation(const std::vector<glm::vec3> &arr)
 
     float size = arr.size();
 
-    // Calculate the sum of elements in the vector
+   
     for (int i = 0; i < size; ++i)
     {
         sum += arr[i];
     }
 
-    // Calculate the mean
     mean = sum / size;
-
-    // Calculate the sum of squared differences from the
-    // mean
     for (int i = 0; i < size; ++i)
     {
         standardDeviation += std::pow(glm::distance(arr[i], mean), 2);
     }
 
-    // Calculate the square root of the variance to get the
-    // standard deviation
     return std::sqrt(standardDeviation / size);
 }
 
@@ -694,14 +677,65 @@ int main()
         // sil::Image image{300 /*width*/, 200 /*height*/};
         // rosace(image);
         // image.save("output/rosace.png");
-        
-        // sil::Image image{300 /*width*/, 200 /*height*/};
+
+        //---------mosaique---------//
+
         // sil::Image image{"images/logo.png"};
+        // sil::Image new_image = mosaique(image);
+        // new_image.save("output/mosaique.png");
+
+        // ---------miroir_mosaique---------//
+
+        // sil::Image image{"images/logo.png"};
+        // sil::Image new_image = miroir_mosaique(image);
+        // new_image.save("output/miroir_mosaique.png");
+
+        //---------glitch---------//
+
+        // sil::Image image{"images/logo.png"};
+        // glitch(image);
+        // image.save("output/glitch.png");
+
+        //---------tri---------//
+
+        // sil::Image image{"images/logo.png"};
+        // tri(image);
+        // image.save("output/tri.png");
+
+        //---------fractale---------//
+
+        // sil::Image image{"images/logo.png"};
+        // fractale(image);
+        // image.save("output/fractale.png");
+
+        //---------degrade_couleur---------//
+
+        // sil::Image image{300 /*width*/, 200 /*height*/};
+        // degrade_couleur(image);
+        // image.save("output/degrade_couleur.png");
+
+        // ---------convolution---------//
+
+        // sil::Image image{"images/logo.png"};
+        // sil::Image new_image = convolution(image);
+        // new_image.save("output/convolution.png");
+
+        // ---------normalisation---------//
+
         // sil::Image image{"images/photo_faible_contraste.jpg"};
-        // sil::Image image{"images/photo.jpg"}; // Lis l'image
-        // vortex(image);
-        // image.save("output/keep_green_only.png");
-        // sil::Image new_image = kuwahara(image);       // Utilise la fonction pour modifier l'image
-        // new_image.save("output/keep_green_only.png"); // Sauvegarde l'image
+        // normalisation(image);
+        // image.save("output/normalisation.png");
+
+        //---------vortex---------//
+
+        // sil::Image image{"images/logo.png"};
+        // sil::Image new_image = vortex(image);
+        // new_image.save("output/vortex.png");
+
+        //---------kuwahara---------//
+
+        sil::Image image{"images/photo.jpg"};
+        sil::Image new_image = kuwahara(image);
+        new_image.save("output/kuwahara.png");
     }
 }
