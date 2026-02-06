@@ -633,67 +633,67 @@ int main()
 
         // sil::Image image{"images/logo.png"};
         // chanel_swap(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/chanel_swap.png");
 
         //---------blackandwhite---------//
 
         // sil::Image image{"images/logo.png"};
         // blackandwhite(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/blackandwhite.png");
 
         //---------negatif---------//
 
         // sil::Image image{"images/logo.png"};
         // negatif(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/negatif.png");
 
         //---------degrade---------//
 
         // sil::Image image{"images/logo.png"};
         // degrade(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/degrade.png");
 
         //---------miroir---------//
 
         // sil::Image image{"images/logo.png"};
         // miroir(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/miroir.png");
 
         //---------bruit---------//
 
         // sil::Image image{"images/logo.png"};
         // bruit(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/bruit.png");
 
         //---------rotation---------//
 
         // sil::Image image{"images/logo.png"};
         // sil::Image new_image = rotation(image);
-        // new_image.save("output/keep_green_only.png");
+        // new_image.save("output/rotation.png");
 
         //---------RGB_split---------//
 
         // sil::Image image{"images/logo.png"};
         // sil::Image new_image = RGB_split(image);
-        // new_image.save("output/keep_green_only.png");
+        // new_image.save("output/RGB_split.png");
 
         //---------luminosite---------//
 
         // sil::Image image{"images/photo.jpg"};
         // sil::Image new_image = luminosite(image);
-        // new_image.save("output/keep_green_only.png");
+        // new_image.save("output/luminosite.png");
 
         //---------cercle---------//
 
         // sil::Image image{300 /*width*/, 200 /*height*/};
         // cercle(image, image.width()/2.0f, image.height() / 2.0f, 60, 5);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/cercle.png");
 
         //---------rosace---------//
 
         // sil::Image image{300 /*width*/, 200 /*height*/};
         // rosace(image);
-        // image.save("output/keep_green_only.png");
+        // image.save("output/rosace.png");
         
         // sil::Image image{300 /*width*/, 200 /*height*/};
         // sil::Image image{"images/logo.png"};
