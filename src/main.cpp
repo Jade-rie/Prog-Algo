@@ -694,7 +694,7 @@ int main()
         // sil::Image image{300 /*width*/, 200 /*height*/};
         // rosace(image);
         // image.save("output/keep_green_only.png");
-grefr
+        
         // sil::Image image{300 /*width*/, 200 /*height*/};
         // sil::Image image{"images/logo.png"};
         // sil::Image image{"images/photo_faible_contraste.jpg"};
