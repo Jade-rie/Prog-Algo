@@ -1,0 +1,179 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib/sil",
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"jsonFile" : "directory-lib.sil-Debug-97ca7f5f967a45a6e3c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib/sil",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib/sil/lib/glm",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-lib.sil.lib.glm-Debug-84a481e87d4dc384cf37.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "lib/sil/lib/glm"
+				},
+				{
+					"build" : "lib/sil/lib/glm/glm",
+					"jsonFile" : "directory-lib.sil.lib.glm.glm-Debug-8f56c32d75993c16b3b1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "lib/sil/lib/glm/glm"
+				},
+				{
+					"build" : "lib/sil/lib/img",
+					"jsonFile" : "directory-lib.sil.lib.img-Debug-1156fef4ff8468f09f20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib/sil/lib/img",
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ImageEditor",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						4
+					],
+					"name" : "sil",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "glm",
+					"parentIndex" : 1
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ImageEditor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ImageEditor-Debug-94a57a9d8d9b30a05903.json",
+					"name" : "ImageEditor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "img::@9728505c1cf5ff17dbeb",
+					"jsonFile" : "target-img-Debug-269633e1e2cbfb8b13a5.json",
+					"name" : "img",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sil::@6318d866cc0f5e7f2986",
+					"jsonFile" : "target-sil-Debug-e6aa5c283a785175e93d.json",
+					"name" : "sil",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "stb_image::@9728505c1cf5ff17dbeb",
+					"jsonFile" : "target-stb_image-Debug-21353306c0a8831468f9.json",
+					"name" : "stb_image",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/mac/TDprog/Prog-Algo/build",
+		"source" : "/Users/mac/TDprog/Prog-Algo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

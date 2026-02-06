@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -I/Users/mac/TDprog/Prog-Algo/src -I/Users/mac/TDprog/Prog-Algo/lib -I/Users/mac/TDprog/Prog-Algo/lib/sil/lib/glm -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/include -g -arch arm64 -o CMakeFiles/ImageEditor.dir/lib/random.cpp.o -c /Users/mac/TDprog/Prog-Algo/lib/random.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/lib/random.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/CMakeFiles/ImageEditor.dir/lib/random.cpp.o"
+},
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -I/Users/mac/TDprog/Prog-Algo/src -I/Users/mac/TDprog/Prog-Algo/lib -I/Users/mac/TDprog/Prog-Algo/lib/sil/lib/glm -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/include -g -arch arm64 -o CMakeFiles/ImageEditor.dir/src/main.cpp.o -c /Users/mac/TDprog/Prog-Algo/src/main.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/src/main.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/CMakeFiles/ImageEditor.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -DSIL_CMAKE_SOURCE_DIR=\\\"/Users/mac/TDprog/Prog-Algo\\\" -I/Users/mac/TDprog/Prog-Algo/lib/sil/lib/glm -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/include -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/include -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib -g -arch arm64 -o lib/sil/CMakeFiles/sil.dir/src/sil.cpp.o -c /Users/mac/TDprog/Prog-Algo/lib/sil/src/sil.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/lib/sil/src/sil.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/lib/sil/CMakeFiles/sil.dir/src/sil.cpp.o"
+},
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib -g -arch arm64 -Wall -Wextra -Wpedantic -pedantic-errors -Wconversion -Wsign-conversion -o lib/sil/lib/img/CMakeFiles/img.dir/src/Load.cpp.o -c /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/src/Load.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/src/Load.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/img/CMakeFiles/img.dir/src/Load.cpp.o"
+},
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -isystem /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib -g -arch arm64 -Wall -Wextra -Wpedantic -pedantic-errors -Wconversion -Wsign-conversion -o lib/sil/lib/img/CMakeFiles/img.dir/src/Save.cpp.o -c /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/src/Save.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/src/Save.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/img/CMakeFiles/img.dir/src/Save.cpp.o"
+},
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -g -arch arm64 -o lib/sil/lib/img/CMakeFiles/stb_image.dir/lib/stb_image/stb_image.cpp.o -c /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib/stb_image/stb_image.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib/stb_image/stb_image.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/img/CMakeFiles/stb_image.dir/lib/stb_image/stb_image.cpp.o"
+},
+{
+  "directory": "/Users/mac/TDprog/Prog-Algo/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin24-g++-15 -g -arch arm64 -o lib/sil/lib/img/CMakeFiles/stb_image.dir/lib/stb_image/stb_image_write.cpp.o -c /Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib/stb_image/stb_image_write.cpp",
+  "file": "/Users/mac/TDprog/Prog-Algo/lib/sil/lib/img/lib/stb_image/stb_image_write.cpp",
+  "output": "/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/img/CMakeFiles/stb_image.dir/lib/stb_image/stb_image_write.cpp.o"
+}
+]

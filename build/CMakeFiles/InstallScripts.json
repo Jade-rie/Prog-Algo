@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/mac/TDprog/Prog-Algo/build/cmake_install.cmake",
+		"/Users/mac/TDprog/Prog-Algo/build/lib/sil/cmake_install.cmake",
+		"/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/glm/cmake_install.cmake",
+		"/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/glm/glm/cmake_install.cmake",
+		"/Users/mac/TDprog/Prog-Algo/build/lib/sil/lib/img/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
